@@ -9,4 +9,12 @@
 .list {
     @include make-row();
     margin-bottom: 70px;
+
+    &--empty {
+        @include make-col(12);
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

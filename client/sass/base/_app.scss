@@ -1,0 +1,28 @@
+body, html {
+  margin: 0;
+  font-family: "San Francisco", Arial sans-serif;
+}
+
+.app {
+  &__content {
+    margin: 0 auto 200px auto;
+
+    @include media-breakpoint-up(md) {
+      max-width: $tablet-max-width;
+    }
+    @include media-breakpoint-up(lg) {
+      max-width: $desktop-max-width;
+    }
+  }
+}
+
+.pageTitle {
+  @include make-col(12);
+  margin-bottom: 14px;
+  font-size: 28px;
+  margin-left: 10px;
+}
+
+a:hover {
+  text-decoration: none;
+}

@@ -1,0 +1,40 @@
+
+.cardWrapper {
+
+  @extend .col;
+
+  margin-bottom: 25px;
+}
+
+.card {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+
+  width: 320px;
+  margin: 0 auto;
+  padding: 10px;
+
+  &__image {
+    @extend .card-img-top;
+    margin-bottom: 25px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+  }
+
+  &__detail {
+  }
+}

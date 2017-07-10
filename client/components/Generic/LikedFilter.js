@@ -3,12 +3,12 @@
  */
 import React from 'react'
 
-import filterButton from '../img/favorite-outline.svg'
-import activeFilterButton from '../img/favorite.svg'
+import filterButton from '../../img/favorite-outline.svg'
+import activeFilterButton from '../../img/favorite.svg'
 
 class LikedFilter extends React.Component {
     constructor(props){
-        super(props)
+        super(props);
 
         this.state = {
             active: false
@@ -17,7 +17,8 @@ class LikedFilter extends React.Component {
     }
 
     handleLikedChange() {
-        this.props.onLikedFilter()
+        // Passes filter state up to parent for cat list filtering
+        this.props.onLikedFilter();
         this.setState({
             active: !this.state.active
         })
