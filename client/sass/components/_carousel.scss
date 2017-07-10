@@ -50,6 +50,12 @@
       background-size: contain;
       width: 40px;
       height: 100px;
+      display: none !important;
+
+      @include media-breakpoint-up(md) {
+          // Override for Slick Carousel
+          display: initial !important;
+      }
 
       &::before {
         content: '';
