@@ -43,11 +43,15 @@ class DetailContainer extends React.Component {
     componentDidMount() {
         // Fetch Cat Details for cat with name x
         fetchCatData(this.props.match.params.name).then((data) => {
-            this.setState({
-                detailLoading: false,
-                data: data,
-                pageTitle: data.name,
-            });
+            if (data.success === true){
+                this.setState({
+                    detailLoading: false,
+                    data: data,
+                    pageTitle: data.name,
+                });
+            } else {
+                this.props.history.replace('/404')
+            }
         });
         // Fetch Cat Alternatives for cat with name x
         fetchCatAlternatives(this.props.match.params.name).then((alternatives) => {
@@ -98,8 +102,7 @@ class DetailContainer extends React.Component {
             return (
                 <section>
                     <PageTitle pageTitle={this.state.pageTitle}/>
-                    <DetailView data={this.state.data} onLike={this.handleLike}>
-                    </DetailView>
+                    <DetailView data={this.state.data} onLike={this.handleLike}/>
 
                     <section className="detail__other">
                         <div className="detail__other__title">

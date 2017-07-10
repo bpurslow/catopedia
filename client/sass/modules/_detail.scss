@@ -11,17 +11,18 @@
 
   @include media-breakpoint-up(lg) {
     max-width: 980px;
-    margin: 0 auto 120px auto;
+    margin: 0 auto;
+    padding-bottom: 80px;
   }
 
   &__image {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 100%;
-
     margin-bottom: 20px;
+
     @include media-breakpoint-up(sm) {
-        margin-bottom: inherit;
+        margin-bottom: initial;
     }
     img {
       width: 100%;
@@ -56,6 +57,7 @@
 
   &__body {
     font-size: 12px;
+    margin-bottom: 24px;
   }
 
   &__actions {

@@ -29,7 +29,6 @@ class ListContainer extends React.Component {
     }
 
     handleLikedFilter() {
-        // Set filter state for cat list
         this.setState({
             isLikedOnly: !this.state.isLikedOnly
         })
@@ -62,7 +61,6 @@ class ListContainer extends React.Component {
 
     __renderCats(catList) {
         // Iterate over cats and generate the card components for each
-
         if (this.state.isLikedOnly) {
             // If filter is applied, only show liked cats
             catList = catList.filter(function(cat) {

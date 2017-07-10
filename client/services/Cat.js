@@ -7,16 +7,20 @@ import catImage2 from '../img/cat8.png'
 
 export function fetchCatData(name) {
     // Ajax call to go and get the cat data
+    // Silly fake id function
     const splitName = name.split("-");
     const id = splitName[splitName.length-1];
 
     if (id > 9 || id < 1) {
-        return {
-            success: false
-        }
+        return sleep(500).then(() => {
+            return {
+                success: false
+            }
+        });
     }
     return sleep(500).then(() => {
         return {
+            success: true,
             id: id,
             name : "Kitty Moaw-Moaw No. " + id,
             title : "Test Title " + id,

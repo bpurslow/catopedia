@@ -9,7 +9,8 @@
 
 ### Issues
 - Fonts are loaded in externally, hence slow load time. Ideally
-would be moved to a local file
+would be moved to a local file and webpack needs to be setup to
+deal specifically with them
 - Carousel like button does not work, need to pass a function through
 better to trigger the like
 - In line with above, the likes are kept temporarily and not ideally.

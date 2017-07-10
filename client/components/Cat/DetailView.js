@@ -49,7 +49,7 @@ class DetailView extends React.Component {
                             }
                             <div className="likes__counter"> {this.props.data.likes} Likes</div>
                         </div>
-                        <Link to="/" className="back">
+                        <Link to="/cat-alogue" className="back">
                             Back to cat-alogue
                         </Link>
                     </section>
