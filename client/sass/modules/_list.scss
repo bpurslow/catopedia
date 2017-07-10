@@ -1,0 +1,12 @@
+.listContainer {
+    @include make-container();
+
+    .filter {
+        margin-bottom: 45px;
+    }
+}
+
+.list {
+    @include make-row();
+    margin-bottom: 70px;
+}

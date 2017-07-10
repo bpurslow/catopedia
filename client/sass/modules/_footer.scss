@@ -1,0 +1,33 @@
+.footerContainer {
+  background-color: $light-grey;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 50px;
+  font-size: 16px;
+  padding: 14px;
+
+  @include media-breakpoint-up(sm) {
+    flex-direction: row;
+    max-width: $tablet-max-width;
+    margin: 0 auto;
+
+    & > div {
+      margin-right: 30px;
+      padding: 0;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    max-width: $desktop-max-width;
+  }
+
+
+
+  a {
+    color: $accent-color;
+  }
+}

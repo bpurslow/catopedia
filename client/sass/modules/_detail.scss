@@ -1,0 +1,17 @@
+.detail {
+
+  display: flex;
+  justify-content: space-between;
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    max-width: 380px;
+    justify-content: space-between;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+  }
+}

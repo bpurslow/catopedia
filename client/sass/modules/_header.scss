@@ -1,0 +1,74 @@
+.header {
+  @include make-container();
+  height: 100px;
+  margin: 0 auto 14px auto;
+  position: relative;
+  border-bottom: 1px solid $grey;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @include media-breakpoint-up(md) {
+    max-width: $desktop-header-max-width;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: 24px;
+    color: $black;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    margin-left: 18px;
+    margin-bottom: 10px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 48px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      align-items: baseline;
+    }
+
+    .title {
+
+    }
+
+    .subtitle {
+      display: none;
+      font-size: 16px;
+      color: $grey;
+
+      @include media-breakpoint-up(md) {
+        display: flex;
+        align-self: center;
+        margin-top: -10px;
+      }
+      @include media-breakpoint-up(lg) {
+        display: flex;
+        align-self: auto;
+        margin-top: 0;
+        margin-left: 8px;
+      }
+    }
+  }
+
+  &__logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .hamburger {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include media-breakpoint-up(lg) {
+      top: 75%;
+    }
+  }
+}
+
+
